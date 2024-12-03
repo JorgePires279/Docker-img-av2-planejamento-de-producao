@@ -73,7 +73,7 @@ public class OPService {
     public OPDto createOP(CreateOPDto opDto) {
 
         if (!tiposPermitidos.contains(opDto.tipo())) {
-            throw new IllegalArgumentException("Tipo de OP inválido");
+            throw new ErroRequisicaoErradaException("Tipo de OP inválido");
         }
     
     
